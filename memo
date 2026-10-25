@@ -1,0 +1,33 @@
+"""
+Design Memo
+
+A tree is appropriate for representing the doctor structure because
+it organizes doctors into parent-child relationships. Each doctor
+can be represented by a node containing their name and pointers to
+their left and right reports. This structure makes it easier to
+represent reporting relationships and recursively explore different
+parts of the hierarchy. However, a binary tree only permits two
+direct reports per doctor, so a general tree would be more suitable
+for a real hospital where doctors may supervise many people.
+
+Software engineers use preorder, inorder, and postorder traversals
+for different purposes. Preorder visits the parent before its
+children, making it useful for copying a tree or displaying a
+hierarchy from top to bottom. Inorder visits the left subtree,
+the parent, and then the right subtree. It is especially useful
+for retrieving values in sorted order from a binary search tree.
+Postorder visits both subtrees before the parent, making it useful
+for deleting a tree or processing child elements before their
+parent. Each traversal visits every node once, so its time
+complexity is O(n), where n is the number of nodes.
+
+Heaps help simulate real-time systems such as emergency intake
+because they keep the highest-priority patient at the root.
+When a new patient arrives, the heap efficiently inserts them
+according to urgency. When staff are ready to treat the next
+patient, the highest-priority patient can be removed without
+sorting the entire queue. In a binary min-heap, insertion and
+removal take O(log n) time, while checking the next patient
+takes O(1) time. This allows a busy system to manage changing
+priorities efficiently.
+"""
